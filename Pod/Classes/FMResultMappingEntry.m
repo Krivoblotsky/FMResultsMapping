@@ -3,7 +3,7 @@
 //  CleanMyMac
 //
 //  Created by krivoblotsky on 11/24/15.
-//  Copyright © 2015 MacPaw. All rights reserved.
+//  Copyright © 2015 Krivoblotsky. All rights reserved.
 //
 
 #import "FMResultMappingEntry.h"
