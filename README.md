@@ -107,7 +107,18 @@ Pretty nice and clean, yeah?
 
 ###Advantages:
 1. Re-using mappings
-2. 
+2. No boilerplate code nightmare
+3. Value transforming via Value Blocks.
+
+This example transforms unix time interval stored in sqlite database into NSDate
+```objc
+/* Mapping with value block */
+[mapping mapColumnValue:@"BORN" toKey:@"birthDate" valueBlock:^id _Nullable(NSString * _Nonnull key, id  _Nonnull object)
+ {
+     NSTimeInterval interval = [object doubleValue];
+     return [NSDate dateWithTimeIntervalSince1970:interval];
+ }];
+```
 
 ## Requirements
 
