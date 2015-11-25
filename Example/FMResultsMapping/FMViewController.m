@@ -71,7 +71,7 @@
     self.fetchedPersons = [results copy];
 }
 
-- (void)_fetchPersons_import 
+- (void)_fetchPersons_import
 {
     NSString *query = @"SELECT * FROM PERSON";
     FMResultSet *resultsSet = [self.database executeQuery:query];
