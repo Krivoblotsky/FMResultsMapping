@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '43474E0CFBB0ACBF6A187A2B'
+               BlueprintIdentifier = 'EB1746A1760193A91400C5B8'
                BlueprintName = 'FMResultsMapping'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'FMResultsMapping.framework'>
