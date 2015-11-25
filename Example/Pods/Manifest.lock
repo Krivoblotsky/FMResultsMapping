@@ -1,5 +1,11 @@
 PODS:
-  - FMResultsMapping (0.1.0)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - FMResultsMapping (0.0.1):
+    - FMDB
 
 DEPENDENCIES:
   - FMResultsMapping (from `../`)
@@ -9,6 +15,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  FMResultsMapping: 1227a4737114c85e00f80cdb2ae3451beb166d71
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  FMResultsMapping: 3b8dcee23d905ea9878bf549492177d78f7fb796
 
 COCOAPODS: 0.39.0

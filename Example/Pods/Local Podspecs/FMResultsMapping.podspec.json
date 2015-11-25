@@ -1,6 +1,6 @@
 {
   "name": "FMResultsMapping",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "summary": "A short description of FMResultsMapping.",
   "description": "",
   "homepage": "https://github.com/<GITHUB_USERNAME>/FMResultsMapping",
@@ -10,16 +10,22 @@
   },
   "source": {
     "git": "https://github.com/<GITHUB_USERNAME>/FMResultsMapping.git",
-    "tag": "0.1.0"
+    "tag": "0.0.1"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0",
+    "osx": "10.8"
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*",
   "resource_bundles": {
     "FMResultsMapping": [
       "Pod/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "FMDB": [
+
     ]
   }
 }
