@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'FMResultsMapping_Example', :exclusive => true do
+  pod "FMResultsMapping", :path => "../"
+end
+
+target 'FMResultsMapping_Tests', :exclusive => true do
+  pod "FMResultsMapping", :path => "../"
+
+  
+end

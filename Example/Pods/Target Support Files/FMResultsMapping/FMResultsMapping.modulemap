@@ -1,0 +1,6 @@
+framework module FMResultsMapping {
+  umbrella header "FMResultsMapping-umbrella.h"
+
+  export *
+  module * { export * }
+}

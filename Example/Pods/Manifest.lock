@@ -1,0 +1,14 @@
+PODS:
+  - FMResultsMapping (0.1.0)
+
+DEPENDENCIES:
+  - FMResultsMapping (from `../`)
+
+EXTERNAL SOURCES:
+  FMResultsMapping:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FMResultsMapping: 1227a4737114c85e00f80cdb2ae3451beb166d71
+
+COCOAPODS: 0.39.0
