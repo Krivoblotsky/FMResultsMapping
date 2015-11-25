@@ -10,6 +10,7 @@
 
 #import "FMDB.h"
 #import "FMResultSet+Mapping.h"
+#import "FMResultsMapper.h"
 
 @interface FMViewController () <UITableViewDataSource>
 
@@ -28,26 +29,10 @@
     [super viewDidLoad];
 
     /* Create FAKE DB */
-    [self _createDatabase];
+    [self _createFakeDatabase];
     
     /* Fetch the data and fill table */
     [self _fetchPersons];
-}
-
-#pragma mark - UITableViewDataSource
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return self.fetchedPersons.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSDictionary *mappedDict = self.fetchedPersons[indexPath.row];
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
-    cell.textLabel.text = mappedDict[@"name"];
-    cell.detailTextLabel.text = mappedDict[@"address"];
-    return cell;
 }
 
 #pragma mark - Fetching
@@ -62,20 +47,49 @@
     {
         NSDictionary *mappedDict = [resultsSet dictionaryWithMapping:^(FMResultMapping *mapping)
         {
+            /* Plain mapping */
             [mapping mapColumnValue:@"ID" toKey:@"personId"];
             [mapping mapColumnValue:@"NAME" toKey:@"name"];
             [mapping mapColumnValue:@"AGE" toKey:@"age"];
             [mapping mapColumnValue:@"ADDRESS" toKey:@"address"];
-            [mapping mapColumnValue:@"SALARY" toKey:@"salary"];
+            
+            /* Mapping with value block */
+            [mapping mapColumnValue:@"BORN" toKey:@"birthDate" valueBlock:^id _Nullable(NSString * _Nonnull key, id  _Nonnull object)
+            {
+                NSTimeInterval interval = [object doubleValue];
+                return [NSDate dateWithTimeIntervalSince1970:interval];
+            }];
         }];
         [results addObject:mappedDict];
     }
     self.fetchedPersons = [results copy];
 }
 
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.fetchedPersons.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary *mappedDict = self.fetchedPersons[indexPath.row];
+    NSDateFormatter *df = [NSDateFormatter new];
+    [df setDateStyle:NSDateFormatterLongStyle];
+    [df setTimeStyle:NSDateFormatterShortStyle];
+    NSDate *birthDate = mappedDict[@"birthDate"];
+    NSString *bornString = [NSString stringWithFormat:@"Born: %@", [df stringFromDate:birthDate]];
+    
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
+    cell.textLabel.text = mappedDict[@"name"];
+    cell.detailTextLabel.text = bornString;
+    return cell;
+}
+
 #pragma mark - DB Routines
 
-- (void)_createDatabase
+- (void)_createFakeDatabase
 {
     /* Create in memory database instance */
     self.database = [FMDatabase databaseWithPath:@""];
@@ -91,19 +105,19 @@
      NAME           TEXT    NOT NULL, \
      AGE            INT     NOT NULL, \
      ADDRESS        CHAR(50), \
-     SALARY         REAL )"];
+     BORN           TIMESTAMP )"];
     
     /* Fill with some data */
     NSInteger i = 0;
     NSArray *persons = @[@"John", @"Mike", @"Peter", @"Andy", @"Marta"];
     for (NSString *name in persons)
     {
-        [self.database executeUpdate:@"INSERT INTO PERSON (ID, NAME, AGE, ADDRESS, SALARY) VALUES (?,?,?,?,?);",
+        [self.database executeUpdate:@"INSERT INTO PERSON (ID, NAME, AGE, ADDRESS, BORN) VALUES (?,?,?,?,?);",
          @(i),
          name,
          @(arc4random() % 80),
          @"Infinite Loop, 1",
-         @(arc4random() % 5000)];
+         @([[NSDate date] timeIntervalSince1970] - arc4random() % 100000)];
         i++;
     }
 }

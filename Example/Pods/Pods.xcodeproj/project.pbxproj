@@ -27,6 +27,8 @@
 		87D84950B2CCE5B6DB8BC0D2629DCE3C /* FMResultsMapping.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3F84478CD43751E9D993930B46D5174A /* FMResultsMapping.bundle */; };
 		967684571EED9A5B3C01FC24AC48845A /* Pods-FMResultsMapping_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E72154A0B3B2DAFD04DA77093727C25 /* Pods-FMResultsMapping_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C97198A7EDD0DD4C492D3278128D68F /* Pods-FMResultsMapping_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E375C78A1D79F454AC43875D2B077D /* Pods-FMResultsMapping_Tests-dummy.m */; };
+		A7C258EE1C05D3BB00195500 /* FMResultsMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C258EC1C05D3BB00195500 /* FMResultsMapper.h */; };
+		A7C258EF1C05D3BB00195500 /* FMResultsMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C258ED1C05D3BB00195500 /* FMResultsMapper.m */; };
 		AD01D434D8D120A3767270766AD30797 /* FMDB-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E865C700958F60E341457979BDD4761F /* FMDB-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA88E88A631D6BD023521B7206CE6C25 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C1D80C66B117F5AC53F8FA95D5342E /* FMDB-dummy.m */; };
 		C107C1BE4FC0CB29C71F7B0190486D4F /* FMResultSet+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 995FA6BFC32E624FC1FE3B1293BEEB6E /* FMResultSet+Mapping.m */; };
@@ -128,6 +130,8 @@
 		9D92AB29D46651DB03CAB55712316524 /* Pods-FMResultsMapping_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FMResultsMapping_Example-umbrella.h"; sourceTree = "<group>"; };
 		A443E3BBE41C24A89AEFE7E05DAF4E6A /* Pods-FMResultsMapping_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FMResultsMapping_Example-dummy.m"; sourceTree = "<group>"; };
 		A58AADAC6820C9FDA331E626F6295789 /* Pods-FMResultsMapping_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FMResultsMapping_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A7C258EC1C05D3BB00195500 /* FMResultsMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultsMapper.h; sourceTree = "<group>"; };
+		A7C258ED1C05D3BB00195500 /* FMResultsMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultsMapper.m; sourceTree = "<group>"; };
 		B71734723991B81CE633402E01C09CA0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		B76D4AD7B6460FE0ED7FDCE6B0825D9B /* FMResultsMapping.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMResultsMapping.xcconfig; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -267,6 +271,8 @@
 				3D3F43BF929D4745B60FFD2CB9849855 /* FMResultMappingEntry.m */,
 				791D9EAD61B5A064E5A67DD5B4CB8F96 /* FMResultSet+Mapping.h */,
 				995FA6BFC32E624FC1FE3B1293BEEB6E /* FMResultSet+Mapping.m */,
+				A7C258EC1C05D3BB00195500 /* FMResultsMapper.h */,
+				A7C258ED1C05D3BB00195500 /* FMResultsMapper.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -404,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F61BE79D4B46C119C136EDE960CE78C /* FMDatabase.h in Headers */,
+				A7C258EE1C05D3BB00195500 /* FMResultsMapper.h in Headers */,
 				74695802583BDB0C0818AC1B97F63815 /* FMDatabaseAdditions.h in Headers */,
 				6C63E2BEBE2BC08BD46F6A91D0A08143 /* FMDatabasePool.h in Headers */,
 				E330886E0E7C450E9669C4BD025D9ABD /* FMDatabaseQueue.h in Headers */,
@@ -569,6 +576,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7C258EF1C05D3BB00195500 /* FMResultsMapper.m in Sources */,
 				F5A0569CB70F6F37A16E32EE210D0C66 /* FMDatabase.m in Sources */,
 				F0895B2A83F948153E1E5EA38A230B66 /* FMDatabaseAdditions.m in Sources */,
 				C8FC0929A42C36174794FE1ADFD620E3 /* FMDatabasePool.m in Sources */,
