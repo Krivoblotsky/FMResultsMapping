@@ -19,12 +19,11 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/FMResultsMapping"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/Krivoblotsky/FMResultsMapping"
   s.license          = 'MIT'
-  s.author           = { "Serg Krivoblotsky" => "krivoblotsky@macpaw.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/FMResultsMapping.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { "Serg Krivoblotsky" => "krivoblotsky@me.com" }
+  s.source           = { :git => "https://github.com/Krivoblotsky/FMResultsMapping.git", :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/Krivoblotsky'
 
   s.platforms = { :ios => '8.1', :osx => '10.8'}
   
