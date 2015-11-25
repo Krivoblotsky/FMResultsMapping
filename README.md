@@ -1,6 +1,8 @@
 # FMResultsMapping
 
-Small, but usefull FMResultSet extenstion which helps to obtain the results from SQLite. Inspired (boy, almost stolen from) EasyMapping.
+![teaser](/screenshots/fm_teaser.png)
+
+Small, but usefull FMResultSet extenstion which helps to obtain the results from SQLite. Inspired (boy, almost stolen from) [EasyMapping] (https://github.com/EasyMapping/EasyMapping).
 
 [![CI Status](http://img.shields.io/travis/Serg Krivoblotsky/FMResultsMapping.svg?style=flat)](https://travis-ci.org/Serg Krivoblotsky/FMResultsMapping)
 [![Version](https://img.shields.io/cocoapods/v/FMResultsMapping.svg?style=flat)](http://cocoapods.org/pods/FMResultsMapping)
@@ -122,6 +124,15 @@ This example transforms unix time interval stored in sqlite database into NSDate
 
 ## Requirements
 
+iOS8+
+
+OSX 10.8+
+
+## Inspiration
+
+1. [EasyMapping](https://github.com/EasyMapping/EasyMapping)
+2. [FMDB] (https://github.com/ccgus/fmdb)
+
 ## Installation
 
 FMResultsMapping is available through [CocoaPods](http://cocoapods.org). To install
@@ -133,7 +144,7 @@ pod "FMResultsMapping"
 
 ## Author
 
-Serg Krivoblotsky, krivoblotsky@macpaw.com
+Serg Krivoblotsky, krivoblotsky@me.com
 
 ## License
 
