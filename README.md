@@ -2,12 +2,10 @@
 
 ![teaser](/screenshots/fm_teaser.png)
 
-Small, but usefull FMResultSet extenstion which helps to obtain the results from SQLite. Inspired (boy, almost stolen from) [EasyMapping] (https://github.com/EasyMapping/EasyMapping).
+Small, but usefull FMResultSet extenstion which helps to obtain the results from SQLite. Inspired by (boy, almost stolen from) [EasyMapping] (https://github.com/EasyMapping/EasyMapping).
 
-[![CI Status](http://img.shields.io/travis/Serg Krivoblotsky/FMResultsMapping.svg?style=flat)](https://travis-ci.org/Serg Krivoblotsky/FMResultsMapping)
-[![Version](https://img.shields.io/cocoapods/v/FMResultsMapping.svg?style=flat)](http://cocoapods.org/pods/FMResultsMapping)
-[![License](https://img.shields.io/cocoapods/l/FMResultsMapping.svg?style=flat)](http://cocoapods.org/pods/FMResultsMapping)
-[![Platform](https://img.shields.io/cocoapods/p/FMResultsMapping.svg?style=flat)](http://cocoapods.org/pods/FMResultsMapping)
+[![Build Status](https://img.shields.io/badge/platform-ios%2Fosx-blue.svg)](https://github.com/Krivoblotsky/FMResultsMapping)
+[![Build Status](https://img.shields.io/badge/version-0.0.1-cdcdcd.svg)](https://github.com/Krivoblotsky/FMResultsMapping)
 
 ## Usage
 
@@ -55,7 +53,7 @@ while ([resultsSet next])
 ```
 Arrrgggh, what a horridness:)
 
-With FMResultsMapping you can write it in this way:
+With <b>FMResultsMapping</b> you can do it in this way:
 
 ```objc
 NSString *query = @"SELECT * FROM PERSON";
