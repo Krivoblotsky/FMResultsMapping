@@ -20,6 +20,6 @@
  *
  *  @return NSArray <NSDictionary *>
  */
-+ (NSArray <NSDictionary *> *)importMapperResultsFromSet:(FMResultSet *)resultsSet mapping:(void (^)(FMResultMapping *mapping))mappingBlock;
++ (NSArray <NSDictionary *> *)importMappedResultsFromSet:(FMResultSet *)resultsSet mapping:(void (^)(FMResultMapping *mapping))mappingBlock;
 
 @end

@@ -38,7 +38,6 @@ Pod::Spec.new do |s|
     'FMResultsMapping' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.public_header_files = 'Pod/Classes/**/*.h'
   s.dependency 'FMDB'
 end

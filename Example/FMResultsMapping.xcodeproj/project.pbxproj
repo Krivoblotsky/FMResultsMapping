@@ -23,6 +23,8 @@
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		8D57D8AA5B8A04647CB7EC65 /* Pods_FMResultsMapping_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25BEF36FB6B9C53F4D51D71 /* Pods_FMResultsMapping_Tests.framework */; };
 		A7C258EB1C05D0A200195500 /* FMResultMappingEntryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C258EA1C05D0A200195500 /* FMResultMappingEntryTests.m */; };
+		A7C258F11C05D5BD00195500 /* FMResultMappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C258F01C05D5BD00195500 /* FMResultMappingTests.m */; };
+		A7C258F31C05D65100195500 /* FMResultSetMappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C258F21C05D65100195500 /* FMResultSetMappingTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		94000946472F58CB1120241F /* Pods-FMResultsMapping_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMResultsMapping_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FMResultsMapping_Tests/Pods-FMResultsMapping_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		977F2CA52C5EC6DD4DC2F674 /* Pods-FMResultsMapping_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMResultsMapping_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FMResultsMapping_Example/Pods-FMResultsMapping_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A7C258EA1C05D0A200195500 /* FMResultMappingEntryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultMappingEntryTests.m; sourceTree = "<group>"; };
+		A7C258F01C05D5BD00195500 /* FMResultMappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultMappingTests.m; sourceTree = "<group>"; };
+		A7C258F21C05D65100195500 /* FMResultSetMappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSetMappingTests.m; sourceTree = "<group>"; };
 		C25BEF36FB6B9C53F4D51D71 /* Pods_FMResultsMapping_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FMResultsMapping_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1371E0A3025C645EDF004BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FE18831F864B133D8061B71C /* FMResultsMapping.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FMResultsMapping.podspec; path = ../FMResultsMapping.podspec; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 			children = (
 				6003F5B6195388D20070C39A /* Supporting Files */,
 				A7C258EA1C05D0A200195500 /* FMResultMappingEntryTests.m */,
+				A7C258F01C05D5BD00195500 /* FMResultMappingTests.m */,
+				A7C258F21C05D65100195500 /* FMResultSetMappingTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -400,6 +406,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7C258F11C05D5BD00195500 /* FMResultMappingTests.m in Sources */,
+				A7C258F31C05D65100195500 /* FMResultSetMappingTests.m in Sources */,
 				A7C258EB1C05D0A200195500 /* FMResultMappingEntryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +554,7 @@
 			baseConfigurationReference = 2B0D501337D939604AE898FF /* Pods-FMResultsMapping_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -570,6 +579,7 @@
 			baseConfigurationReference = 94000946472F58CB1120241F /* Pods-FMResultsMapping_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

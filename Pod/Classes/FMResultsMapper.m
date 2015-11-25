@@ -11,7 +11,7 @@
 
 @implementation FMResultsMapper
 
-+ (NSArray <NSDictionary *> *)importMapperResultsFromSet:(FMResultSet *)resultsSet mapping:(void (^)(FMResultMapping *mapping))mappingBlock
++ (NSArray <NSDictionary *> *)importMappedResultsFromSet:(FMResultSet *)resultsSet mapping:(void (^)(FMResultMapping *mapping))mappingBlock
 {
     NSMutableArray *results = [NSMutableArray new];
     while ([resultsSet next])

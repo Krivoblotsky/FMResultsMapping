@@ -32,7 +32,13 @@
     [self _createFakeDatabase];
     
     /* Fetch the data and fill table */
+    
+    //One-by-one mapping
     [self _fetchPersons];
+
+    /* Uncomment to try import */
+//    //Import
+//    [self _fetchPersons_import];
 }
 
 #pragma mark - Fetching
@@ -63,6 +69,28 @@
         [results addObject:mappedDict];
     }
     self.fetchedPersons = [results copy];
+}
+
+- (void)_fetchPersons_import
+{
+    NSString *query = @"SELECT * FROM PERSON";
+    FMResultSet *resultsSet = [self.database executeQuery:query];
+    
+    self.fetchedPersons = [FMResultsMapper importMappedResultsFromSet:resultsSet mapping:^(FMResultMapping *mapping)
+    {
+        /* Plain mapping */
+        [mapping mapColumnValue:@"ID" toKey:@"personId"];
+        [mapping mapColumnValue:@"NAME" toKey:@"name"];
+        [mapping mapColumnValue:@"AGE" toKey:@"age"];
+        [mapping mapColumnValue:@"ADDRESS" toKey:@"address"];
+        
+        /* Mapping with value block */
+        [mapping mapColumnValue:@"BORN" toKey:@"birthDate" valueBlock:^id _Nullable(NSString * _Nonnull key, id  _Nonnull object)
+         {
+             NSTimeInterval interval = [object doubleValue];
+             return [NSDate dateWithTimeIntervalSince1970:interval];
+         }];
+    }];
 }
 
 #pragma mark - UITableViewDataSource
