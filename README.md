@@ -1,5 +1,7 @@
 # FMResultsMapping
 
+Small, but usefull FMResultSet extenstion which helps to obtain the results from SQLite. Inspired (boy, almost stolen from) EasyMapping.
+
 [![CI Status](http://img.shields.io/travis/Serg Krivoblotsky/FMResultsMapping.svg?style=flat)](https://travis-ci.org/Serg Krivoblotsky/FMResultsMapping)
 [![Version](https://img.shields.io/cocoapods/v/FMResultsMapping.svg?style=flat)](http://cocoapods.org/pods/FMResultsMapping)
 [![License](https://img.shields.io/cocoapods/l/FMResultsMapping.svg?style=flat)](http://cocoapods.org/pods/FMResultsMapping)
