@@ -1,11 +1,11 @@
 # FMResultsMapping
 
-Small, but usefull FMResultSet extenstion which helps to obtain the results from SQLite. Inspired (boy, almost stolen from) EasyMapping.
+![teaser](/screenshots/fm_teaser.png)
 
-[![CI Status](http://img.shields.io/travis/Serg Krivoblotsky/FMResultsMapping.svg?style=flat)](https://travis-ci.org/Serg Krivoblotsky/FMResultsMapping)
-[![Version](https://img.shields.io/cocoapods/v/FMResultsMapping.svg?style=flat)](http://cocoapods.org/pods/FMResultsMapping)
-[![License](https://img.shields.io/cocoapods/l/FMResultsMapping.svg?style=flat)](http://cocoapods.org/pods/FMResultsMapping)
-[![Platform](https://img.shields.io/cocoapods/p/FMResultsMapping.svg?style=flat)](http://cocoapods.org/pods/FMResultsMapping)
+Small, but usefull FMResultSet extenstion which helps to obtain the results from SQLite. Inspired by (boy, almost stolen from) [EasyMapping] (https://github.com/EasyMapping/EasyMapping).
+
+[![Build Status](https://img.shields.io/badge/platform-ios%2Fosx-blue.svg)](https://github.com/Krivoblotsky/FMResultsMapping)
+[![Build Status](https://img.shields.io/badge/version-0.0.1-cdcdcd.svg)](https://github.com/Krivoblotsky/FMResultsMapping)
 
 ## Usage
 
@@ -53,7 +53,7 @@ while ([resultsSet next])
 ```
 Arrrgggh, what a horridness:)
 
-With FMResultsMapping you can write it in this way:
+With <b>FMResultsMapping</b> you can do it in this way:
 
 ```objc
 NSString *query = @"SELECT * FROM PERSON";
@@ -122,6 +122,15 @@ This example transforms unix time interval stored in sqlite database into NSDate
 
 ## Requirements
 
+iOS8+
+
+OSX 10.8+
+
+## Inspiration
+
+1. [EasyMapping](https://github.com/EasyMapping/EasyMapping)
+2. [FMDB] (https://github.com/ccgus/fmdb)
+
 ## Installation
 
 FMResultsMapping is available through [CocoaPods](http://cocoapods.org). To install
@@ -133,7 +142,7 @@ pod "FMResultsMapping"
 
 ## Author
 
-Serg Krivoblotsky, krivoblotsky@macpaw.com
+Serg Krivoblotsky, krivoblotsky@me.com
 
 ## License
 
