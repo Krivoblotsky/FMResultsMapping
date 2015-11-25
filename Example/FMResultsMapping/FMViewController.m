@@ -127,7 +127,7 @@
         NSLog(@"Error db opening: %@", self.database.lastError);
     }
     
-    /* Create person table */
+    /* Create person table */ 
     [self.database executeUpdate:@"CREATE TABLE PERSON (\
      ID INT PRIMARY KEY     NOT NULL, \
      NAME           TEXT    NOT NULL, \
